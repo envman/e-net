@@ -21,12 +21,11 @@ class App extends Component {
         </div>
         <p className="App-intro">
           Welcome to e-net!<code>src/App.js</code> and save to reload.
-
-          <MuiThemeProvider>
-            <RaisedButtonTest/>
-          </MuiThemeProvider>
-
         </p>
+
+        <MuiThemeProvider>
+          <RaisedButtonTest/>
+        </MuiThemeProvider>
       </div>
     )
   }
