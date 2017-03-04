@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "auth0-js": "^8.3.0",
+    "bootstrap": "^3.3.7",
+    "jwt-decode": "^2.1.0",
     "material-ui": "^0.17.0",
     "react": "^15.4.2",
+    "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.2",
     "react-router": "^2.0.0",
     "react-tap-event-plugin": "^2.0.1"

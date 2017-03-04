@@ -1,14 +1,18 @@
-import { Router, Route, hashHistory } from 'react-router'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
-import NewStarter from './NewStarter'
+
+import 'bootstrap/dist/css/bootstrap.css'
 import './index.css'
 
+import App from './App'
+
+import {browserHistory} from 'react-router'
+import makeRoutes from './routes'
+
+const routes = makeRoutes()
+
+const mountNode = document.querySelector('#root');
 ReactDOM.render(
-  (<Router history={hashHistory}>
-    <Route path="/" component={App}/>
-    <Route path="/newstarter" component = {NewStarter}/>
-  </Router>),
-  document.getElementById('root')
-);
+  <App history={browserHistory}
+        routes={routes} />,
+mountNode);

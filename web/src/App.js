@@ -1,34 +1,31 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router'
-import ReactDOM from 'react-dom';
-import logo from './logo.svg'
-import './App.css'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButtonTest from './materialTest';
+import React, { PropTypes } from 'react';
+import { Router } from 'react-router';
 
-class App extends Component {
-  render() {
+class App extends React.Component {
+  static contextTypes = {
+    router: PropTypes.object
+  }
+
+  static propTypes = {
+    history: PropTypes.object.isRequired,
+    routes: PropTypes.element.isRequired
+  };
+
+  get content() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to e-net</h2>
-        </div>
-        <div>
-          <ul role="nav">
-            <li><Link to="/newstarter">New Starter</Link></li>
-          </ul>
-        </div>
-        <p className="App-intro">
-          Welcome to e-net!<code>src/App.js</code> and save to reload.
-        </p>
-
-        <MuiThemeProvider>
-          <RaisedButtonTest/>
-        </MuiThemeProvider>
-      </div>
+      <Router
+        routes={this.props.routes}
+        history={this.props.history} />
     )
   }
+
+  render () {
+     return (
+       <div style={{ height: '100%' }}>
+         {this.content}
+       </div>
+     )
+   }
 }
 
 export default App;
