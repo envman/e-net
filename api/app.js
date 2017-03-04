@@ -14,7 +14,7 @@ app.get('/ok', (req, res) => {
 })
 
 app.get('/test', (req, res) => {
-  res.json(['testing' ])
+  res.json(['testing', 'hello Zoltan!' ])
 })
 
 app.listen(8080, function () {

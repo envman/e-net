@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 
 class CallGetOk extends Component {
     constructor() {
@@ -9,10 +10,7 @@ class CallGetOk extends Component {
     componentDidMount() {
         fetch('http://localhost:8080/test')
             .then(res => res.json())
-            .then(response => {
-                this.setState({response })
-                console.log(this.state)
-            })
+            .then(response => { this.setState({ response }) })
     }
 
     render() {
@@ -22,10 +20,10 @@ class CallGetOk extends Component {
                     this.state.response.length ?
                         this.state.response.map(resp => <p>{resp}</p>) :
                         <p>No response yet.</p>
-
                 }
             </span >
         )
     }
 }
+
 export default CallGetOk

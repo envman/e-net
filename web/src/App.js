@@ -5,8 +5,20 @@ import logo from './logo.svg'
 import './App.css'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButtonTest from './materialTest';
+import CallGetOk from './apiCalls/callGetOk'
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = { shouldShow: false }
+  }
+
+  show = () => {
+    this.setState({ shouldShow: true })
+    console.log('I WAS CALLED! :D')
+  }
+
   render() {
     return (
       <div className="App">
@@ -18,12 +30,21 @@ class App extends Component {
           <ul role="nav">
             <li><Link to="/newstarter">New Starter</Link></li>
             <li><Link to="apiCalls/callGetOk">Call api/Test</Link></li>
-            <li>Response: </li>
+            
           </ul>
+
+          { 
+            this.state.shouldShow ? <CallGetOk></CallGetOk> : null 
+          }
+          
         </div>
         <p className="App-intro">
           Welcome to e-net!<code>src/App.js</code> and save to reload.
         </p>
+
+        <button onClick={this.show}>
+          Do Stuff
+        </button>
 
         <MuiThemeProvider>
           <RaisedButtonTest />
