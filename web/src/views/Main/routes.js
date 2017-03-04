@@ -4,6 +4,7 @@ import AuthService from './../../utils/AuthService'
 import Container from './Container'
 import Home from './Home/Home'
 import Login from './Login/Login'
+import Recruitment from './Recruitment/Recruitment'
 
 const auth = new AuthService('B7mtJpBucE6wlyo1KGxN2R5e0q6VvAS9', 'etech-dev.eu.auth0.com');
 
@@ -26,6 +27,7 @@ export const makeMainRoutes = () => {
       <IndexRedirect to="/home" />
       <Route path="home" component={Home} onEnter={requireAuth} />
       <Route path="login" component={Login} onEnter={parseAuthHash} />
+      <Route path="recruitment" component={Recruitment} onEnter={requireAuth} />
     </Route>
   )
 }
