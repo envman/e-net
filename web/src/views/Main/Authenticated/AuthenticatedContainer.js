@@ -1,8 +1,10 @@
 import React, { PropTypes as T } from 'react'
+import { Link } from 'react-router'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme'
+import './styles.css'
 
 export class AuthenticatedContainer extends React.Component {
 
@@ -23,7 +25,8 @@ export class AuthenticatedContainer extends React.Component {
         <div className="row">
           <div className="col-xs-3">
             <Drawer open={true}>
-              <MenuItem>Item</MenuItem>
+              <Link to="/auth/home"><MenuItem>Home</MenuItem></Link>
+              <Link to="/auth/recruitment"><MenuItem>Recruitment</MenuItem></Link>
             </Drawer>
           </div>
           <div className="col-xs-9">
