@@ -11,9 +11,8 @@ class CallGetOk extends Component {
             .then(res => res.json())
             .then(response => {
                 this.setState({ response })
-                console.log("response " + response.toString())
+                console.log(response)
             })
-
     }
 
     render() {
