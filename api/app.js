@@ -13,4 +13,6 @@ app.get('/test', (req, res) => {
   res.json({ name: 'testing' })
 })
 
-app.listen(8080)
+app.listen(8080, function () {
+  console.log("listening 8080")
+})
