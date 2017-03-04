@@ -4,7 +4,7 @@ import AuthService from './../../utils/AuthService'
 import Container from './Container'
 import Home from './Authenticated/Home/Home'
 import Login from './Login/Login'
-import Recruitment from './Recruitment/Recruitment'
+import Recruitment from './Authenticated/Recruitment/Recruitment'
 import Applicant from './Applicant/Applicant'
 import AuthenticatedContainer from './Authenticated/AuthenticatedContainer'
 
@@ -31,9 +31,8 @@ export const makeMainRoutes = () => {
       <Route path="auth" component={AuthenticatedContainer}>
         <Route path="home" component={Home} onEnter={requireAuth} />
         <Route path="recruitment" component={Recruitment} onEnter={requireAuth} />
+        <Route path="applicant/:id" component={Applicant} onEnter={requireAuth} />
       </Route>
-      <Route path="recruitment" component={Recruitment} onEnter={requireAuth} />
-      <Route path="applicant/:id" component={Applicant} onEnter={requireAuth} />
     </Route>
   )
 }
