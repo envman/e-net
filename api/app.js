@@ -8,6 +8,8 @@ let app = express()
 app.use(cors())
 app.use(bodyParser.json())
 
+app.use('/email', require('./routes/email'))
+
 app.get('/ok', (req, res) => {
   res.send('OK')
 })
