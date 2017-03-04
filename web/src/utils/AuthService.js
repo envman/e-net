@@ -29,6 +29,7 @@ export default class AuthService extends EventEmitter {
         alert('Error: ' + err.description)
         return
       }
+
       if (authResult && authResult.idToken && authResult.accessToken) {
         this.setToken(authResult.accessToken, authResult.idToken)
         browserHistory.replace('/home')
@@ -43,6 +44,7 @@ export default class AuthService extends EventEmitter {
       password,
     }, function(err) {
       if (err) {
+        console.log(err)
         alert('Error: ' + err.description)
       }
     })
@@ -55,6 +57,8 @@ export default class AuthService extends EventEmitter {
   }
 
   parseHash(hash) {
+    console.log('parse hash')
+
     this.auth0.parseHash({ hash }, (err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setToken(authResult.accessToken, authResult.idToken)
@@ -64,6 +68,7 @@ export default class AuthService extends EventEmitter {
             console.log('Error loading the Profile', error)
           } else {
             this.setProfile(profile)
+            console.log('profile', profile)
           }
         })
       } else if (authResult && authResult.error) {
