@@ -10,8 +10,8 @@ class CallGetOk extends Component {
         fetch('http://localhost:8080/test')
             .then(res => res.json())
             .then(response => {
-                this.setState({ response })
-                console.log(response)
+                this.setState({response })
+                console.log(this.state)
             })
     }
 
@@ -20,7 +20,7 @@ class CallGetOk extends Component {
             <span >
                 {
                     this.state.response.length ?
-                        this.state.response.map(resp => <p>{resp.name}</p>) :
+                        this.state.response.map(resp => <p>{resp}</p>) :
                         <p>No response yet.</p>
 
                 }
