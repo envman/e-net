@@ -1,7 +1,8 @@
 import React, { PropTypes as T } from 'react'
-import {Button} from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import AuthService from './../../../utils/AuthService'
 import styles from './styles.module.css'
+import FileUpload from './../../../apiCalls/fileUpload'
 
 export class Home extends React.Component {
   static contextTypes = {
@@ -20,7 +21,7 @@ export class Home extends React.Component {
 
     // not sure what this is for?
     props.auth.on('profile_updated', (newProfile) => {
-      this.setState({profile: newProfile})
+      this.setState({ profile: newProfile })
     })
   }
 
@@ -35,6 +36,7 @@ export class Home extends React.Component {
       <div className={styles.root}>
         <h2>Home</h2>
         <p>Welcome {profile.name}!</p>
+        <FileUpload></FileUpload>
         <Button onClick={this.logout.bind(this)}>Logout</Button>
       </div>
     )
