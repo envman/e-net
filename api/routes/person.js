@@ -9,11 +9,11 @@ router.get('/test', (req, res) => {
 
 router.get('/find/:id', (req, res) => {
     let personId = req.params.id
-    fs.readFile(personId + '/personalData', function (err, data) {
+    fs.readFile(personId + '/personalData.json', function (err, data) {
         if (err) {
             return console.log(err);
         }
-        console.log(data);
+       res.send(data)
     })
 })
 
