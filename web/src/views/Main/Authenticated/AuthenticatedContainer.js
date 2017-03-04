@@ -26,6 +26,10 @@ export class AuthenticatedContainer extends React.Component {
             <Drawer open={true}>
               <Link to="/auth/home"><MenuItem>Home</MenuItem></Link>
               <Link to="/auth/recruitment"><MenuItem>Recruitment</MenuItem></Link>
+              <Link to="/newstarter"><MenuItem>New Starters</MenuItem></Link>
+              <Link to="/product"><MenuItem>Products</MenuItem></Link>
+              <Link to="/client"><MenuItem>Clients</MenuItem></Link>
+              <Link to="/travelDirection"><MenuItem>Travel Directions</MenuItem></Link>
               <Link to="/auth/logout"><MenuItem>Logout</MenuItem></Link>
             </Drawer>
           </div>
