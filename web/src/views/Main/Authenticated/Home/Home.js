@@ -37,7 +37,6 @@ export class Home extends React.Component {
         <h2>Home</h2>
         <p>Welcome {profile.name}!</p>
         <FileUpload></FileUpload>
-        <Button onClick={this.logout.bind(this)}>Logout</Button>
       </div>
     )
   }

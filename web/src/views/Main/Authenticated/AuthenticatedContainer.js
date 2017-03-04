@@ -22,14 +22,15 @@ export class AuthenticatedContainer extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-xs-3">
+          <div>
             <Drawer open={true}>
+              <h1 className="text-center">e-Net</h1>
               <Link to="/auth/home"><MenuItem>Home</MenuItem></Link>
               <Link to="/auth/recruitment"><MenuItem>Recruitment</MenuItem></Link>
               <Link to="/auth/logout"><MenuItem>Logout</MenuItem></Link>
             </Drawer>
           </div>
-          <div className="col-xs-9">
+          <div className="wrapper">
             {children}
           </div>
         </div>
