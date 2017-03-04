@@ -5,7 +5,6 @@ import './App.css'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButtonTest from './materialTest';
 
-
 class App extends Component {
   render() {
     return (
