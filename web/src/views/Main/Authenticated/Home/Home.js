@@ -14,7 +14,6 @@ export class Home extends React.Component {
   }
 
   constructor(props, context) {
-    console.log(props)
     super(props, context)
     this.state = {
       profile: props.auth.getProfile()

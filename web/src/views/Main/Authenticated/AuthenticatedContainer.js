@@ -26,6 +26,7 @@ export class AuthenticatedContainer extends React.Component {
             <Drawer open={true}>
               <Link to="/auth/home"><MenuItem>Home</MenuItem></Link>
               <Link to="/auth/recruitment"><MenuItem>Recruitment</MenuItem></Link>
+              <Link to="/auth/logout"><MenuItem>Logout</MenuItem></Link>
             </Drawer>
           </div>
           <div className="col-xs-9">
@@ -36,7 +37,6 @@ export class AuthenticatedContainer extends React.Component {
     )
   }
 }
-
 
 AuthenticatedContainer.childContextTypes = {
   muiTheme: React.PropTypes.object.isRequired,
