@@ -19,7 +19,7 @@ class App extends React.Component {
     )
   }
 
-  render () {
+  render() {
      return (
        <div style={{ height: '100%' }}>
          {this.content}

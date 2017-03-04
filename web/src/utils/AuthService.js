@@ -2,6 +2,7 @@ import { EventEmitter } from 'events'
 import { isTokenExpired } from './jwtHelper'
 import { browserHistory } from 'react-router'
 import auth0 from 'auth0-js'
+import decode from 'jwt-decode'
 
 export default class AuthService extends EventEmitter {
   constructor(clientId, domain) {
@@ -31,6 +32,7 @@ export default class AuthService extends EventEmitter {
       }
 
       if (authResult && authResult.idToken && authResult.accessToken) {
+        console.log(authResult.idToken)
         this.setToken(authResult.accessToken, authResult.idToken)
         browserHistory.replace('/home')
       }
@@ -100,6 +102,11 @@ export default class AuthService extends EventEmitter {
     // Retrieves the profile data from localStorage
     const profile = localStorage.getItem('profile')
     return profile ? JSON.parse(localStorage.profile) : {}
+  }
+
+  email() {
+    const token = this.getToken()
+    return decode(token).email
   }
 
   getToken() {
