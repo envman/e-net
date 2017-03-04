@@ -1,5 +1,9 @@
-import React, { PropTypes } from 'react';
-import { Router } from 'react-router';
+import React, { PropTypes } from 'react'
+import { Router } from 'react-router'
+import Drawer from 'material-ui/Drawer'
+import MenuItem from 'material-ui/MenuItem'
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 
 class App extends React.Component {
   static contextTypes = {
@@ -11,6 +15,17 @@ class App extends React.Component {
     routes: PropTypes.element.isRequired
   };
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      open: false
+    }
+  }
+
+  getChildContext() {
+    return { muiTheme: getMuiTheme(baseTheme) };
+  }
+
   get content() {
     return (
       <Router
@@ -19,13 +34,32 @@ class App extends React.Component {
     )
   }
 
+  toggleMenu() {
+    this.setState({
+      open: !this.state.open
+    })
+  }
+
   render () {
      return (
-       <div style={{ height: '100%' }}>
-         {this.content}
+       <div className="container-fluid">
+         <div className="row">
+           <div className="col-xs-3">
+             <Drawer open={true}>
+               <MenuItem>Item</MenuItem>
+             </Drawer>
+           </div>
+           <div className="col-xs-9">
+             {this.content}
+           </div>
+         </div>
        </div>
      )
    }
+}
+
+App.childContextTypes = {
+  muiTheme: React.PropTypes.object.isRequired,
 }
 
 export default App;
