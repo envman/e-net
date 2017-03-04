@@ -17,6 +17,7 @@ class App extends Component {
         <div>
           <ul role="nav">
             <li><Link to="/newstarter">New Starter</Link></li>
+            <li><Link to="/api/ok">Call api/Test</Link></li>
           </ul>
         </div>
         <p className="App-intro">
@@ -24,8 +25,10 @@ class App extends Component {
         </p>
 
         <MuiThemeProvider>
-          <RaisedButtonTest/>
+          <RaisedButtonTest />
         </MuiThemeProvider>
+
+
       </div>
     )
   }
