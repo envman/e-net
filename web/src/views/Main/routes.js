@@ -8,6 +8,7 @@ import Recruitment from './Authenticated/Recruitment/Recruitment'
 import Applicant from './Applicant/Applicant'
 import AuthenticatedContainer from './Authenticated/AuthenticatedContainer'
 import Logout from './Authenticated/Logout/Logout'
+import NewStarter from './NewStarter/NewStarter'
 
 const auth = new AuthService('B7mtJpBucE6wlyo1KGxN2R5e0q6VvAS9', 'etech-dev.eu.auth0.com');
 
@@ -35,6 +36,7 @@ export const makeMainRoutes = () => {
         <Route path="recruitment" component={Recruitment} />
         <Route path="applicant/:id" component={Applicant} />
         <Route path="logout" component={Logout} />
+        <Route path="newstarter" component={NewStarter} />
       </Route>
     </Route>
   )
