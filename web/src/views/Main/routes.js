@@ -2,9 +2,10 @@ import React from 'react'
 import {Route, IndexRedirect} from 'react-router'
 import AuthService from './../../utils/AuthService'
 import Container from './Container'
-import Home from './Home/Home'
+import Home from './Authenticated/Home/Home'
 import Login from './Login/Login'
-import Recruitment from './Recruitment/Recruitment'
+import Recruitment from './Authenticated/Recruitment/Recruitment'
+import AuthenticatedContainer from './Authenticated/AuthenticatedContainer'
 
 const auth = new AuthService('B7mtJpBucE6wlyo1KGxN2R5e0q6VvAS9', 'etech-dev.eu.auth0.com');
 
@@ -24,10 +25,12 @@ const parseAuthHash = (nextState, replace) => {
 export const makeMainRoutes = () => {
   return (
     <Route path="/" component={Container} auth={auth}>
-      <IndexRedirect to="/home" />
-      <Route path="home" component={Home} onEnter={requireAuth} />
+      <IndexRedirect to="/auth/home" />
       <Route path="login" component={Login} onEnter={parseAuthHash} />
-      <Route path="recruitment" component={Recruitment} onEnter={requireAuth} />
+      <Route path="auth" component={AuthenticatedContainer}>
+        <Route path="home" component={Home} onEnter={requireAuth} />
+        <Route path="recruitment" component={Recruitment} onEnter={requireAuth} />
+      </Route>
     </Route>
   )
 }

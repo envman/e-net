@@ -1,5 +1,9 @@
 import React, { PropTypes as T } from 'react'
 import styles from './styles.module.css'
+import Drawer from 'material-ui/Drawer'
+import MenuItem from 'material-ui/MenuItem'
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 
 export class Container extends React.Component {
   static contextTypes = {

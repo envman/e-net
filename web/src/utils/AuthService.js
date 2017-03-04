@@ -32,7 +32,7 @@ export default class AuthService extends EventEmitter {
 
       if (authResult && authResult.idToken && authResult.accessToken) {
         this.setToken(authResult.accessToken, authResult.idToken)
-        browserHistory.replace('/home')
+        browserHistory.replace('/auth/home')
       }
     })
   }

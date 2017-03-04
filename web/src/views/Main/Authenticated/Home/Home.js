@@ -1,8 +1,8 @@
 import React, { PropTypes as T } from 'react'
 import { Button } from 'react-bootstrap'
-import AuthService from './../../../utils/AuthService'
+import AuthService from '../../../../utils/AuthService'
 import styles from './styles.module.css'
-import FileUpload from './../../../apiCalls/fileUpload'
+import FileUpload from '../../../../apiCalls/fileUpload'
 
 export class Home extends React.Component {
   static contextTypes = {
@@ -14,6 +14,7 @@ export class Home extends React.Component {
   }
 
   constructor(props, context) {
+    console.log(props)
     super(props, context)
     this.state = {
       profile: props.auth.getProfile()
