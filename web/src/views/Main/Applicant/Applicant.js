@@ -1,5 +1,5 @@
 import React, { PropTypes as T } from 'react'
-import {Button} from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 
 export class Recruitment extends React.Component {
   constructor(props, context) {
@@ -7,9 +7,9 @@ export class Recruitment extends React.Component {
   }
 
   componentDidMount() {
-      fetch('http://localhost:8080/applicant/')
-          .then(res => res.json())
-          .then(response => { this.setState({ response }) })
+    fetch('http://localhost:8080/applicant/')
+      .then(res => res.json())
+      .then(response => { this.setState({ response }) })
   }
 
   render() {

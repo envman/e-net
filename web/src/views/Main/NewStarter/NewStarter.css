@@ -1,0 +1,35 @@
+
+
+.New-starter {
+  text-align: justify;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: grey;
+}
+
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+
+.tableStyle{
+    font-family: arial, sans-serif;
+    width: 100%;
+    color: black;
+    text-align:center;
+}
+
+
+
+.product {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(http://www.etech.net/wp-content/uploads/2016/02/product-bg2.png);
+    margin-bottom: 1000px;
+}
+
