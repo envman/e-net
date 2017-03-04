@@ -27,13 +27,7 @@ class App extends React.Component {
     )
   }
 
-  toggleMenu() {
-    this.setState({
-      open: !this.state.open
-    })
-  }
-
-  render () {
+  render() {
      return (
        <div className="container-fluid">
           {this.content}

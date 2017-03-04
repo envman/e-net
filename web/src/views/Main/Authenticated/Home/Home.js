@@ -20,8 +20,6 @@ export class Home extends React.Component {
       profile: props.auth.getProfile()
     }
 
-    // console.log(props.auth.getToken())
-
     // not sure what this is for?
     props.auth.on('profile_updated', (newProfile) => {
       this.setState({ profile: newProfile })
