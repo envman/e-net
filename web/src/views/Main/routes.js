@@ -28,10 +28,11 @@ export const makeMainRoutes = () => {
     <Route path="/" component={Container} auth={auth}>
       <IndexRedirect to="/auth/home" />
       <Route path="login" component={Login} onEnter={parseAuthHash} />
-      <Route path="auth" component={AuthenticatedContainer}>
-        <Route path="home" component={Home} onEnter={requireAuth} />
-        <Route path="recruitment" component={Recruitment} onEnter={requireAuth} />
-        <Route path="applicant/:id" component={Applicant} onEnter={requireAuth} />
+      <Route path="auth" component={AuthenticatedContainer} onEnter={requireAuth}>
+        <IndexRedirect to="home"/>
+        <Route path="home" component={Home} />
+        <Route path="recruitment" component={Recruitment} />
+        <Route path="applicant/:id" component={Applicant} />
       </Route>
     </Route>
   )
