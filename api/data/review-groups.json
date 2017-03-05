@@ -1,0 +1,11 @@
+[
+  {
+    "id": "1",
+    "name": "ZSociety",
+    "members": [
+      { "id": "1", "name": "Rob", "email": "robertgill@etech.net" },
+      { "id": "2", "name": "Zoltan", "email": "zoltanstomfai@etech.net" },
+      { "id": "3", "name": "Raja", "email": "rajakhan@etech.net" }
+    ]
+  }
+]

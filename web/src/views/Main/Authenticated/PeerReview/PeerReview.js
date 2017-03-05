@@ -13,20 +13,22 @@ export class PeerReview extends React.Component {
   }
 
   componentDidMount() {
-
-    console.log('mounted')
-
-    fetch('http://localhost:8080/reviews/list')
+    fetch('http://localhost:8080/reviews/groups')
       .then(res => res.json())
       .then(response => {
-        console.log('response', response)
         this.setState({ response })
       })
   }
 
+  send = () => {
+    console.log('send')
+
+    
+  }
+
   render() {
     return (
-      <div className="container">
+      <div className="container make-it-black">
         <Table>
           <TableBody displayRowCheckbox={false}>
             {this.state.response.map((r, i) => (
@@ -41,9 +43,9 @@ export class PeerReview extends React.Component {
 
                     <CardText expandable={true} style={{backgroundColor: '#FAFAFA'}}>
                       <List>
-                        {r.emails.map((e, i) => <ListItem primaryText={e} key={i}/>)}
+                        {r.members.map((e, i) => <ListItem primaryText={e.name + ' - ' + e.email} key={i}/>)}
                         <CardActions>
-                          <FloatingActionButton mini={true} secondary={true}>
+                          <FloatingActionButton onClick={this.send} mini={true} secondary={true}>
                            <ContentAdd />
                          </FloatingActionButton>
                         </CardActions>
