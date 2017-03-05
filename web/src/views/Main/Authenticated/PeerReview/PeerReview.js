@@ -62,6 +62,10 @@ export class PeerReview extends React.Component {
       })
   }
 
+  reviewFeedback = (id) => {
+    this.context.router.push("/auth/reviewfeedback/" + id)
+  }
+
   render() {
     return (
       <div className="container make-it-black">
@@ -79,7 +83,7 @@ export class PeerReview extends React.Component {
 
                     <CardText expandable={true} style={{backgroundColor: '#FAFAFA'}}>
                       <List>
-                        {r.members.map((e, i) => <ListItem primaryText={e.name + ' - ' + e.email} key={i}/>)}
+                        {r.members.map((e, i) => <ListItem onClick={() => this.reviewFeedback(e.id)} primaryText={e.name + ' - ' + e.email} key={i}/>)}
                         <CardActions>
                           <FloatingActionButton onClick={() => this.send(r.id)} mini={true} secondary={true}>
                            <ContentAdd />
@@ -101,6 +105,10 @@ export class PeerReview extends React.Component {
       </div>
     )
   }
+}
+
+PeerReview.contextTypes = {
+    router: React.PropTypes.object
 }
 
 export default PeerReview

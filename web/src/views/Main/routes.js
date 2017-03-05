@@ -16,6 +16,7 @@ import PeerReview from './Authenticated/PeerReview/PeerReview'
 import Review from './Review/Review'
 import Thanks from './Thanks/Thanks'
 import Feedback from './Feedback/Feedback'
+import ReviewFeedback from './Authenticated/ReviewFeedback/ReviewFeedback'
 
 const auth = new AuthService('B7mtJpBucE6wlyo1KGxN2R5e0q6VvAS9', 'etech-dev.eu.auth0.com');
 
@@ -51,6 +52,7 @@ export const makeMainRoutes = () => {
         <Route path="product" component={Product} />
         <Route path="travelDirection" component={TravelDirection} />
         <Route path="review" component={PeerReview} />
+        <Route path="reviewfeedback/:id" component={ReviewFeedback} />
       </Route>
     </Route>
   )
