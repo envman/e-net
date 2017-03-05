@@ -9,9 +9,9 @@ class Product extends Component {
 
       <div className="container-fluid">
         <div className="row tableStyle ">
-          <div className="col-md-4"><img src="./Gradient_Survey-Hub.jpg" alt="Survey Hub" /></div>
-          <div className="col-md-4"><img src="./Gradient_Eco-Hub.png" alt="Survey Hub" /></div>
-          <div className="col-md-4"><img src="./Gradient_Property-Hub.png" alt="Survey Hub" /></div>
+          <div className="col-md-4"><img src="../Gradient_Survey-Hub.jpg" alt="Survey Hub" /></div>
+          <div className="col-md-4"><img src="../Gradient_Eco-Hub.png" alt="Survey Hub" /></div>
+          <div className="col-md-4"><img src="../Gradient_Property-Hub.png" alt="Survey Hub" /></div>
         </div>
         <div className="row tableStyle">
           <div className="col-md-4"><h2>Survey Hub</h2></div>
@@ -33,9 +33,9 @@ class Product extends Component {
         </div>
 
         <div className="row tableStyle ">
-          <div className="col-md-4"><img src="./Gradient_Eco-Portal.png" alt="Eco Portal" /></div>
-          <div className="col-md-4"><img src="./Gradient_Smart-Survey-App.png" alt="Smart Survey App" /></div>
-          <div className="col-md-4"><img src="./Gradient_Technical-Monitoring-Portal.png" alt="Technical Monitoring Portal" /></div>
+          <div className="col-md-4"><img src="../Gradient_Eco-Portal.png" alt="Eco Portal" /></div>
+          <div className="col-md-4"><img src="../Gradient_Smart-Survey-App.png" alt="Smart Survey App" /></div>
+          <div className="col-md-4"><img src="../Gradient_Technical-Monitoring-Portal.png" alt="Technical Monitoring Portal" /></div>
         </div>
         <div className="row tableStyle">
           <div className="col-md-4"><h2>Eco Portal</h2></div>
@@ -57,9 +57,9 @@ class Product extends Component {
         </div>
 
         <div className="row tableStyle">
-          <div className="col-md-4"><img src="./Gradient_Property-Assesment-App.png" alt="Eco Portal" /></div>
-          <div className="col-md-4"><img src="./Gradient_Installer-App.png" alt="Smart Survey App" /></div>
-          <div className="col-md-4"><img src="./Gradient_Floor-Plan-App.png" alt="Technical Monitoring Portal" /></div>
+          <div className="col-md-4"><img src="../Gradient_Property-Assesment-App.png" alt="Eco Portal" /></div>
+          <div className="col-md-4"><img src="../Gradient_Installer-App.png" alt="Smart Survey App" /></div>
+          <div className="col-md-4"><img src="../Gradient_Floor-Plan-App.png" alt="Technical Monitoring Portal" /></div>
         </div>
         <div className="row tableStyle">
           <div className="col-md-4"><h2>Property Assessment App</h2></div>
