@@ -24,7 +24,18 @@
     text-align:center;
 }
 
+.panelLeft, .panelRight{
+  width: 40%;
+}
 
+.panelLeft{
+  float: left;
+}
+
+.panelRight{
+  float: right;
+  margin-right: 10;
+}
 
 .product {
     background-repeat: no-repeat;
