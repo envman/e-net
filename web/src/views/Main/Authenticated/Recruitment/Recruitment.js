@@ -2,7 +2,6 @@ import React, { PropTypes as T } from 'react'
 
 import { Button } from 'react-bootstrap'
 
-import {Button} from 'react-bootstrap'
 import { Link } from 'react-router'
 
 
