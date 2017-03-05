@@ -34,9 +34,9 @@ class NewStarter extends Component {
             <div className="col-md-4">We have worked on a range of products for Energy Suppliers and Chartered Surveyors</div>
           </div>
           <div className="row tableStyle">
-            <div className="col-md-4"><button><Link to="/product">See more</Link></button></div>
-            <div className="col-md-4"><button><Link to="/client">See more</Link></button></div>
-            <div className="col-md-4"><button><Link to="/travelDirection">See more</Link></button></div>
+            <div className="col-md-4"><button><Link to="/auth/product">See more</Link></button></div>
+            <div className="col-md-4"><button><Link to="/auth/client">See more</Link></button></div>
+            <div className="col-md-4"><button><Link to="/auth/travelDirection">See more</Link></button></div>
           </div>
         </div>
       </div>

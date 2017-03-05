@@ -12,6 +12,7 @@ import NewStarter from './NewStarter/NewStarter'
 import Client from './NewStarter/Client'
 import Product from './NewStarter/Product'
 import TravelDirection from './NewStarter/TravelDirection'
+import PeerReview from './Authenticated/PeerReview/PeerReview'
 
 const auth = new AuthService('B7mtJpBucE6wlyo1KGxN2R5e0q6VvAS9', 'etech-dev.eu.auth0.com');
 
@@ -43,6 +44,7 @@ export const makeMainRoutes = () => {
         <Route path="client" component={Client} />
         <Route path="product" component={Product} />
         <Route path="travelDirection" component={TravelDirection} />
+        <Route path="review" component={PeerReview} />
       </Route>
     </Route>
   )

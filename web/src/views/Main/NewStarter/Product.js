@@ -27,9 +27,9 @@ class Product extends Component {
     journeys such as ECO, Green Deal and Able to Pay.</div>
         </div>
         <div className="row tableStyle">
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/survey-hub/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/eco-hub/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/property-hub/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/survey-hub/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/eco-hub/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/property-hub/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
         </div>
 
         <div className="row tableStyle ">
@@ -51,15 +51,15 @@ class Product extends Component {
     and upload work that has already taken place.</div>
         </div>
         <div className="row tableStyle">
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/eco-portal/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/smart-survey-app/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/technical-monitoring-portal/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/eco-portal/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/smart-survey-app/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/technical-monitoring-portal/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
         </div>
 
         <div className="row tableStyle">
-          <div className="col-md-4"><img src="../Gradient_Property-Assesment-App.png" alt="Eco Portal" /></div>
-          <div className="col-md-4"><img src="../Gradient_Installer-App.png" alt="Smart Survey App" /></div>
-          <div className="col-md-4"><img src="../Gradient_Floor-Plan-App.png" alt="Technical Monitoring Portal" /></div>
+          <div className="col-md-4"><img src="../Gradient_Property-Assesment-App.png" alt="Property Assessment App" /></div>
+          <div className="col-md-4"><img src="../Gradient_Installer-App.png" alt="Installer App" /></div>
+          <div className="col-md-4"><img src="../Gradient_Floor-Plan-App.png" alt="Floor Plan App" /></div>
         </div>
         <div className="row tableStyle">
           <div className="col-md-4"><h2>Property Assessment App</h2></div>
@@ -75,14 +75,55 @@ class Product extends Component {
      full property descriptions which can be used with the EPC App.</div>
         </div>
         <div className="row tableStyle">
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/property-assessment-app/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/installer-app/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/floor-plan-app/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/property-assessment-app/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/installer-app/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/floor-plan-app/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
         </div>
 
+        <div className="row tableStyle">
+          <div className="col-md-4"><img src="../Gradient_Legionella-App.png" alt="Legionella Risk Assessment App" /></div>
+          <div className="col-md-4"><img src="../Gradient_PreAssesment.png" alt="Pre Assessment Survey" /></div>
+          <div className="col-md-4"><img src="../Gradient_EPC-Survey.png" alt="EPC Survey" /></div>
+        </div>
+        <div className="row tableStyle">
+          <div className="col-md-4"><h2>Legionella Risk Assessment App</h2></div>
+          <div className="col-md-4"><h2>Pre Assessment Survey</h2></div>
+          <div className="col-md-4"><h2>EPC Survey</h2></div>
+        </div>
+        <div className="row tableStyle">
+          <div className="col-md-4">The Legionella Risk Assessment App enables Assessors to complete and lodge Legionella reports, capturing supporting observations,
+            whilst maintaining professional standards and regulatory compliance.</div>
+          <div className="col-md-4">The Pre Assessment Survey allow Assessors to conduct preliminary property inspections, discuss potential products and measures with the occupier,
+             begin the ECO qualification journey and perform technical surveys prior to an EPC assessment appointment.</div>
+          <div className="col-md-4">The EPC Survey enables Energy Assessors to effectively undertake EPCs, capturing RdSAP data
+            onsite and supporting observations, whilst maintaining professional standards and regulatory compliance.</div>
+        </div>
+        <div className="row tableStyle">
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/legionella-app/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/pre-assessment-survey-app/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/epc-mobile-application/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
+        </div>
 
+        <div className="row tableStyle">
+          <div className="col-md-4"><img src="../Gradient_Risk-Assessment-App.png" alt="Risk Assessment Survey" /></div>
+          <div className="col-md-4"><img src="../Gradient_Technical-Survey.png" alt="Technical Survey" /></div>
+        </div>
+        <div className="row tableStyle">
+          <div className="col-md-4"><h2>Risk Assessment Survey</h2></div>
+          <div className="col-md-4"><h2>Technical Survey</h2></div>
+        </div>
+        <div className="row tableStyle">
+          <div className="col-md-4">The Risk Assessment Survey enables any specific property risks to be captured and reported ahead of 
+            further assessment or installation works.</div>
+          <div className="col-md-4">The Technical Survey enables a full assessment of the suitability of a property for measure installation, 
+            identifying pre-installation requirements, and recording advice and guidance provided to the customer.</div>
+        </div>
+        <div className="row tableStyle">
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/risk-assessment/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/technical-survey/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
+        </div>
 
-
+<br/>
 
       </div>
     )

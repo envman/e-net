@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Team 1",
+    "emails": [
+      "kevinlee@etech.net",
+      "robertgill@etech.net"
+    ]
+  },
+  {
+    "name": "Team 2",
+    "emails": [
+      "reissjarvis@etech.net"
+    ]
+  }
+]
