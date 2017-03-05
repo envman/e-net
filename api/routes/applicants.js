@@ -26,6 +26,8 @@ router.get('/list', (req, res) => {
 
 router.post('/update', (req, res) => {
 
+  console.log('updating ', req.body)
+
     let person = req.body
     person.id = person.id || shortid()
 

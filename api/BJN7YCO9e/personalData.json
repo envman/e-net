@@ -1,6 +1,7 @@
 {
-  "name": "Bob Sun",
-  "age": 29,
+  "id": "BJN7YCO9e",
+  "name": "Bob Sunaa",
   "favColour": "blue",
-  "id": "BJN7YCO9e"
+  "email": "bob@sun.net",
+  "age": 29
 }
