@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
-import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme'
+import baseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
 
 export class AuthenticatedContainer extends React.Component {
 
