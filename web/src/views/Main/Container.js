@@ -10,6 +10,10 @@ export class Container extends React.Component {
     router: T.object
   }
 
+  getChildContext() {
+    return { muiTheme: getMuiTheme(baseTheme) };
+  }
+
   render() {
     let children = null;
     if (this.props.children) {
@@ -20,10 +24,14 @@ export class Container extends React.Component {
 
     return (
       <div>
-        {children}
+       {children}
       </div>
     )
   }
+}
+
+Container.childContextTypes = {
+  muiTheme: React.PropTypes.object.isRequired,
 }
 
 export default Container;

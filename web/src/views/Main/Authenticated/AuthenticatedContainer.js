@@ -3,13 +3,8 @@ import { Link } from 'react-router'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
-import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme'
 
 export class AuthenticatedContainer extends React.Component {
-
-  getChildContext() {
-    return { muiTheme: getMuiTheme(baseTheme) };
-  }
 
   render() {
     let children = null;
@@ -20,11 +15,11 @@ export class AuthenticatedContainer extends React.Component {
     }
 
     return (
-      <div className="container-fluid">
-        <div className="row">
+      <div>
+        <div>
           <div>
             <Drawer open={true}>
-              <Link to="/auth/home"><MenuItem><h1 className="text-center">e-Net</h1></MenuItem></Link>
+              <Link to="/auth/home"><MenuItem><h1 className="text-center">e-net</h1></MenuItem></Link>
               <Link to="/auth/recruitment"><MenuItem>Recruitment</MenuItem></Link>
               <Link to="/auth/newstarter"><MenuItem>New Starters</MenuItem></Link>
               <Link to="/auth/product"><MenuItem>Products</MenuItem></Link>
