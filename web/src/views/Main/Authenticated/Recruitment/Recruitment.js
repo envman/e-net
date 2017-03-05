@@ -2,6 +2,7 @@ import React, { PropTypes as T } from 'react'
 import { Button } from 'react-bootstrap'
 import { Link } from 'react-router'
 import linkState from 'react-link-state'
+import { FontIcon } from 'material-ui/FontIcon'
 
 export class Recruitment extends React.Component {
   constructor(props, context) {
@@ -49,14 +50,13 @@ export class Recruitment extends React.Component {
     let id = e.target.parentElement.getAttribute("data-id")
 
     this.context.router.push("/auth/applicant/" + id)
-    // this.props.history.push("/auth/applicant/" + id)
   }
 
   render() {
     return (
       <div>
-        <h2>Recruitment</h2>
         <div className="container-fluid">
+          <h2>Recruitment</h2>
           <form>
             <div className="form-group">
               <div className="row">

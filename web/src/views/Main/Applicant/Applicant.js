@@ -87,7 +87,7 @@ export class Applicant extends React.Component {
 
           <FileUpload applicantid={this.props.params.id}></FileUpload>
 
-          {this.state.files.map(f => <div>{f}</div>)}
+          {this.state.files.map(f => <a href={"http://localhost:8080/applicants/download/" + f + "/" + this.props.params.id}>{f}</a>)}
 
           {this.state.comments.map(c =>
             <div className="col-sm-12">

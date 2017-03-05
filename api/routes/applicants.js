@@ -2,6 +2,7 @@ let router = require('express').Router()
 let fs = require('fs')
 let shortid = require('shortid').generate
 let mkdirp = require('mkdirp')
+let path = require('path')
 
 let data = fs.readFileSync('./list.json', 'utf-8')
 let list = JSON.parse(data)
@@ -37,8 +38,6 @@ router.get('/list', (req, res) => {
 })
 
 router.post('/update', (req, res) => {
-
-    console.log('updating ', req.body)
 
     let person = req.body
     person.id = person.id || shortid()
@@ -76,6 +75,13 @@ router.post('/upload/:file/:id', (req, res) => {
       res.send('DONE')
     })
     .pipe(writeStream)
+})
+
+router.get('/download/:file/:id', (req, res) => {
+  let file = req.params.file
+  let id = req.params.id
+
+  res.sendFile(path.join(__dirname, '..', 'data', id, file))
 })
 
 module.exports = router
