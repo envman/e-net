@@ -15,12 +15,12 @@ router.get('/groups', (req, res) => {
   })
 })
 
-.post('/review/:from/:for', (req, res) => {
+.post('/review/:from/:to', (req, res) => {
   let from = req.params.from
-  let forPerson = req.params.for
+  let forPerson = req.params.to
 
-  mkdirp('./' + email, (err) => {
-    fs.writeFile(path.join(__dirname, '..', 'data', forPerson, from + '.json'), (fileErr) => {
+  mkdirp('./data/reviews/' + forPerson, (err) => {
+    fs.writeFile(path.join(__dirname, '..', 'data', 'reviews', forPerson, from + '.json'), JSON.stringify(req.body, null, 2), (fileErr) => {
       res.send('DONE')
     })
   })

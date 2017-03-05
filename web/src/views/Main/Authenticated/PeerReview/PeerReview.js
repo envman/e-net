@@ -20,10 +20,24 @@ export class PeerReview extends React.Component {
       })
   }
 
-  send = () => {
-    console.log('send')
+  send = (id) => {
+    let group = this.state.response.filter(g => g.id == id)[0]
 
-    
+    console.log(group)
+
+    for (let fromPerson of group.members) {
+      let message = fromPerson.name + ' Please Review\n'
+
+      for (let toPerson of group.members) {
+        if (toPerson.id != fromPerson.id) {
+            message += toPerson.name + '\n'
+            message += 'http://localhost:3000/review/' + fromPerson.id + '/' + toPerson.id + '\n'
+        }
+      }
+
+      message += 'Thanks!'
+      console.log(message)
+    }
   }
 
   render() {
@@ -45,7 +59,7 @@ export class PeerReview extends React.Component {
                       <List>
                         {r.members.map((e, i) => <ListItem primaryText={e.name + ' - ' + e.email} key={i}/>)}
                         <CardActions>
-                          <FloatingActionButton onClick={this.send} mini={true} secondary={true}>
+                          <FloatingActionButton onClick={() => this.send(r.id)} mini={true} secondary={true}>
                            <ContentAdd />
                          </FloatingActionButton>
                         </CardActions>

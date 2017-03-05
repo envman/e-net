@@ -35,7 +35,7 @@ export const makeMainRoutes = () => {
     <Route path="/" component={Container} auth={auth}>
       <IndexRedirect to="/auth/home" />
       <Route path="login" component={Login} onEnter={parseAuthHash} />
-      <Route path="review/:email" component={Review} />
+      <Route path="review/:fromId/:toId" component={Review} />
       <Route path="auth" component={AuthenticatedContainer} onEnter={requireAuth}>
         <IndexRedirect to="home"/>
         <Route path="home" component={Home} />

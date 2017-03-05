@@ -7,7 +7,7 @@ import FileUpload from '../../../apiCalls/fileUpload'
 export class Review extends React.Component {
   constructor(props, context) {
     super(props, context)
-    this.state = { id: '', name: '', email: '', good: '', bad: '' }
+    this.state = { good: '', bad: '' }
   }
 
   static propTypes = {
@@ -23,15 +23,11 @@ export class Review extends React.Component {
   }
 
   save = () => {
-    this.state.id = this.props.params.id
+    // this.state.id = this.props.params.id
 
-    if (this.state.newComment) {
-      this.state.comments.push({user: 'test', message: this.state.newComment, date: new Date().toString(), email: this.props.auth.email() })
-    }
+    console.log(this.state)
 
-    delete this.state.newComment
-
-    fetch('http://localhost:8080/applicants/update/', {
+    fetch('http://localhost:8080/reviews/review/' + this.props.params.fromId + '/' + this.props.params.toId, {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -39,7 +35,10 @@ export class Review extends React.Component {
       },
       body: JSON.stringify(this.state)
     })
-      .then(() => { this.context.router.push("/auth/recruitment/") })
+      .then(() => {
+        // this.context.router.push("/auth/recruitment/")
+        console.log('done')
+      })
       .catch((err) => {
         console.log('broken!');
       })
