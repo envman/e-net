@@ -1,8 +1,5 @@
-import React, { PropTypes as T } from 'react'
-import { Button } from 'react-bootstrap'
-import { Link } from 'react-router'
+import React from 'react'
 import linkState from 'react-link-state'
-import { FontIcon } from 'material-ui/FontIcon'
 
 export class Recruitment extends React.Component {
   constructor(props, context) {

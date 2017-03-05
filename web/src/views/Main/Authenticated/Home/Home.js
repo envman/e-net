@@ -1,5 +1,4 @@
 import React, { PropTypes as T } from 'react'
-import { Button } from 'react-bootstrap'
 import AuthService from '../../../../utils/AuthService'
 import styles from './styles.module.css'
 import FileUpload from '../../../../apiCalls/fileUpload'

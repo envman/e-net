@@ -42,7 +42,7 @@ export class Login extends React.Component {
       <div className="container">
         <Jumbotron>
           <h2 className={styles.mainTitle}>
-            <img src="https://cdn.auth0.com/styleguide/1.0.0/img/badge.svg" />
+            <img src="https://cdn.auth0.com/styleguide/1.0.0/img/badge.svg" alt="please login" />
           </h2>
           <div className={styles.root}>
             <h2>Login</h2>

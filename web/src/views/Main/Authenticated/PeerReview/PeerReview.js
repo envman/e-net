@@ -1,9 +1,7 @@
 import React from 'react'
-import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import {Table, TableBody, TableRow, TableRowColumn} from 'material-ui/Table';
+import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import {List, ListItem} from 'material-ui/List';
-import FloatingActionButton from 'material-ui/FloatingActionButton';
-import ContentAdd from 'material-ui/svg-icons/content/add';
 
 export class PeerReview extends React.Component {
   constructor(props, context) {
@@ -21,7 +19,7 @@ export class PeerReview extends React.Component {
   }
 
   send = (id) => {
-    let group = this.state.response.filter(g => g.id == id)[0]
+    let group = this.state.response.filter(g => g.id === id)[0]
 
     let messages = []
 
@@ -29,7 +27,7 @@ export class PeerReview extends React.Component {
       let message = fromPerson.name + ' Please Review\n'
 
       for (let toPerson of group.members) {
-        if (toPerson.id != fromPerson.id) {
+        if (toPerson.id !== fromPerson.id) {
             message += toPerson.name + '\n'
             message += 'http://localhost:3000/review/' + fromPerson.id + '/' + toPerson.id + '\n'
         }

@@ -1,8 +1,6 @@
 import React, { PropTypes as T } from 'react'
-import { Button } from 'react-bootstrap'
 import linkState from 'react-link-state'
 import AuthService from './../../../utils/AuthService'
-import FileUpload from '../../../apiCalls/fileUpload'
 
 export class Review extends React.Component {
   constructor(props, context) {

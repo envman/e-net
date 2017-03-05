@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import './NewStarter.css'
-import GridList from 'material-ui/GridList';
-
 
 class Product extends Component {
   render() {
@@ -113,9 +111,9 @@ class Product extends Component {
           <div className="col-md-4"><h2>Technical Survey</h2></div>
         </div>
         <div className="row tableStyle">
-          <div className="col-md-4">The Risk Assessment Survey enables any specific property risks to be captured and reported ahead of 
+          <div className="col-md-4">The Risk Assessment Survey enables any specific property risks to be captured and reported ahead of
             further assessment or installation works.</div>
-          <div className="col-md-4">The Technical Survey enables a full assessment of the suitability of a property for measure installation, 
+          <div className="col-md-4">The Technical Survey enables a full assessment of the suitability of a property for measure installation,
             identifying pre-installation requirements, and recording advice and guidance provided to the customer.</div>
         </div>
         <div className="row tableStyle">

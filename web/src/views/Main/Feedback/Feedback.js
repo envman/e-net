@@ -1,5 +1,4 @@
-import React, { PropTypes as T } from 'react'
-import { Button } from 'react-bootstrap'
+import React from 'react'
 
 export class Home extends React.Component {
   constructor(props, context) {

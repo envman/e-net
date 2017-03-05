@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './NewStarter.css'
-import GridList from 'material-ui/GridList';
 import { Link } from 'react-router'
 
 class NewStarter extends Component {

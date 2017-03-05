@@ -1,5 +1,4 @@
-import React, { PropTypes as T } from 'react'
-import { Button } from 'react-bootstrap'
+import React from 'react'
 
 export class ReviewFeedback extends React.Component {
   constructor(props, context) {
@@ -20,8 +19,8 @@ export class ReviewFeedback extends React.Component {
       .then(res => res.json())
       .then(response => {
         let user = response
-          .filter(g => g.members.filter(m => m.id == this.props.params.id).length > 0)
-          .map(g => g.members.filter(m => m.id == this.props.params.id)[0])[0]
+          .filter(g => g.members.filter(m => m.id === this.props.params.id).length > 0)
+          .map(g => g.members.filter(m => m.id === this.props.params.id)[0])[0]
 
         let email = user.email
 

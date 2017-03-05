@@ -1,8 +1,7 @@
-import React, { PropTypes as T } from 'react'
+import React from 'react'
 import { Link } from 'react-router'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
-import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
 export class AuthenticatedContainer extends React.Component {
 
