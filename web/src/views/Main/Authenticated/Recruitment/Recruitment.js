@@ -80,8 +80,8 @@ export class Recruitment extends React.Component {
               {this.state.response.map((r) =>
                 <tr onClick={this.clicked} data-id={r.id} key={r.id}>
                   <td>{r.name}</td>
-                  <td>2</td>
-                  <td>3</td>
+                  <td>{r.role}</td>
+                  <td>{r.status}</td>
                 </tr>
               )}
 

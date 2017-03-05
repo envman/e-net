@@ -2,12 +2,12 @@ import React, { PropTypes as T } from 'react'
 import { Button } from 'react-bootstrap'
 import linkState from 'react-link-state'
 import AuthService from './../../../utils/AuthService'
+import FileUpload from '../../../apiCalls/fileUpload'
 
 export class Applicant extends React.Component {
   constructor(props, context) {
     super(props, context)
-
-    this.state = { id: '', name: '', favColour: '', email: '', comments: [], newComment: '' }
+    this.state = { id: '', name: '', favColour: '', email: '', comments: [], newComment: '', files: [], status: '', role: '' }
   }
 
   static propTypes = {
@@ -19,6 +19,8 @@ export class Applicant extends React.Component {
       .then(res => res.json())
       .then(response => {
         response.comments = response.comments || []
+        response.status = response.status || 'New'
+
         this.setState(response)
       })
   }
@@ -29,6 +31,8 @@ export class Applicant extends React.Component {
     if (this.state.newComment) {
       this.state.comments.push({user: 'test', message: this.state.newComment, date: new Date().toString(), email: this.props.auth.email() })
     }
+
+    delete this.state.newComment
 
     fetch('http://localhost:8080/applicants/update/', {
       method: 'POST',
@@ -57,6 +61,33 @@ export class Applicant extends React.Component {
             <label>Email</label>
             <input type="text" className="form-control" valueLink={linkState(this, 'email')} />
           </div>
+
+          <div className="form-group">
+            <label>Role</label>
+            <select className="form-control" id="exampleSelect1" valueLink={linkState(this, 'role')} >
+              <option>Software Developer - Graduate</option>
+              <option>Software Developer - Year Placement</option>
+              <option>Software Developer - Summer Internship</option>
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label>Status</label>
+            <select className="form-control" id="exampleSelect1" valueLink={linkState(this, 'status')} >
+              <option>New</option>
+              <option>CV Recieved</option>
+              <option>Form Recieved</option>
+              <option>Pending Interview</option>
+              <option>Interviewed</option>
+              <option>Rejected</option>
+              <option>Offered</option>
+              <option>Offer Accepted</option>
+            </select>
+          </div>
+
+          <FileUpload applicantid={this.props.params.id}></FileUpload>
+
+          {this.state.files.map(f => <div>{f}</div>)}
 
           {this.state.comments.map(c =>
             <div className="col-sm-12">

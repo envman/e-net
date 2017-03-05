@@ -2,9 +2,15 @@ import React, { Component } from 'react'
 import Dropzone from 'react-dropzone'
 
 class FileUpload extends Component {
-    onDrop(acceptedFiles, rejectedFiles) {
+  constructor(props, context) {
+    super(props, context)
+
+    this.state = { applicantid: props.applicantid }
+  }
+
+    onDrop = (acceptedFiles, rejectedFiles) => {
         acceptedFiles.forEach(function (element) {
-            fetch('http://localhost:8080/upload/' + element.name, {
+            fetch('http://localhost:8080/applicants/upload/' + element.name + '/' + this.state.applicantid, {
                 method: 'POST',
                 body: element
             })

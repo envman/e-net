@@ -27,18 +27,6 @@ app.get('/test', (req, res) => {
   res.json(['testing', 'hello Zoltan!'])
 })
 
-app.post('/upload/:file', (req, res) => {
-  let file = req.params.file
-
-  let writeStream = fs.createWriteStream('./' + file)
-
-  req
-    .on('end', () => {
-      res.send('DONE')
-    })
-    .pipe(writeStream)
-})
-
 app.listen(8080, function () {
   console.log("listening @ 8080")
 })

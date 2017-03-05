@@ -1,0 +1,19 @@
+{
+  "id": "B1FhrMtqe",
+  "name": "John Smith",
+  "favColour": "",
+  "email": "test",
+  "comments": [
+    {
+      "user": "test",
+      "message": "Testing",
+      "date": "Sun Mar 05 2017 04:36:27 GMT+0000 (GMT)",
+      "email": "robertgill@etech.net"
+    }
+  ],
+  "files": [
+    "278812 (4).pdf"
+  ],
+  "status": "Interviewed",
+  "role": "Software Developer - Year Placement"
+}

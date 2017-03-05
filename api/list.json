@@ -1,10 +1,20 @@
 [
   {
     "name": "Bob Bobson",
-    "id": "BkIBGWtqg"
+    "id": "S1ruVftqg",
+    "status": "Pending Interview",
+    "role": "Software Developer - Year Placement"
   },
   {
-    "name": "Mr Testy",
-    "id": "B1pPMWKcl"
+    "name": "Mr Weebl",
+    "id": "BJsrHGK9l",
+    "status": "CV Recieved",
+    "role": "Software Developer - Summer Internship"
+  },
+  {
+    "name": "John Smith",
+    "id": "B1FhrMtqe",
+    "status": "Interviewed",
+    "role": "Software Developer - Year Placement"
   }
 ]
