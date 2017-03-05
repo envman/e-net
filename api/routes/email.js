@@ -1,21 +1,3 @@
-// let router = require('express').Router()
-// let helper = require('sendgrid').mail;
-// let from_email = new helper.Email('test@example.com');
-// let to_email = new helper.Email('test@example.com');
-// let subject = 'Hello World from the SendGrid Node.js Library!';
-// let content = new helper.Content('text/plain', 'Hello, Email!');
-// let mail = new helper.Mail(from_email, subject, to_email, content);
-// let sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
-
-// router.get('/test', (req, res) => {
-
-//   sendgrid.send(email);
-//   method: 'POST'
-//   path: '/v3/mail/send'
-//   body: mail.toJSON()
-//   res.send('OK')
-// })
-
 
 const router = require('express').Router();
 
@@ -54,53 +36,4 @@ router.post('/send', (req, res) => {
 })
 
 
-// const SENDGRID_API_KEY = '0zcsIYwqZvoyRB2Oz9Q0';
-// const SENDGRID_SENDER = 'noreply@etech.net';
-// const Sendgrid = require('sendgrid')(SENDGRID_API_KEY);
-
-
-// // router.get('/', (req, res) => {
-// //   res.render('index');
-// // });
-
-// router.post('/hello', (req, res) => {
-//   const sgReq = Sendgrid.emptyRequest({
-//     method: 'POST',
-//     path: '/v3/mail/send',
-//     body: {
-//       personalizations: [{
-//         to: [{ email: req.body.email }],
-//         subject: 'Hello World!'
-//       }],
-//       from: { email: SENDGRID_SENDER },
-//       content: [{
-//         type: 'text/plain',
-//         value: 'Sendgrid on Google App Engine with Node.js.'
-//       }]
-//     }
-//   });
-
-
-
-//   Sendgrid.API(sgReq, (err) => {
-//     if (err) {
-//       console.log(err)
-//     }
-
-//     res.send('YO')
-//     // res.render('index', {
-//     //   sent: true
-//     // });
-//     return;
-//   });
-// })
-
-// // if (module === require.main) {
-// //   const PORT = process.env.PORT || 8080;
-// //   router.listen(PORT, () => {
-// //     console.log(`App listening on port ${PORT}`);
-// //     console.log('Press Ctrl+C to quit.');
-// //   });
-
-// // }
 module.exports = router
