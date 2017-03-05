@@ -10,7 +10,6 @@ app.use(cors())
 app.use(bodyParser.json())
 
 app.use('/email', require('./routes/email'))
-app.use('/person', require('./routes/person'))
 app.use('/applicants', require('./routes/applicants'))
 
 app.get('/ok', (req, res) => {
