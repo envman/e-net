@@ -14,6 +14,7 @@ import Product from './NewStarter/Product'
 import TravelDirection from './NewStarter/TravelDirection'
 import PeerReview from './Authenticated/PeerReview/PeerReview'
 import Review from './Review/Review'
+import Thanks from './Thanks/Thanks'
 
 const auth = new AuthService('B7mtJpBucE6wlyo1KGxN2R5e0q6VvAS9', 'etech-dev.eu.auth0.com');
 
@@ -36,6 +37,7 @@ export const makeMainRoutes = () => {
       <IndexRedirect to="/auth/home" />
       <Route path="login" component={Login} onEnter={parseAuthHash} />
       <Route path="review/:fromId/:toId" component={Review} />
+      <Route path="thanks" component={Thanks} />
       <Route path="auth" component={AuthenticatedContainer} onEnter={requireAuth}>
         <IndexRedirect to="home"/>
         <Route path="home" component={Home} />

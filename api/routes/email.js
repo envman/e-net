@@ -4,8 +4,6 @@ const router = require('express').Router();
 const nodemailer = require('nodemailer');
 
 router.post('/send', (req, res) => {
-  console.log(req.body.email)
-
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -35,5 +33,10 @@ router.post('/send', (req, res) => {
   });
 })
 
+.get('/test/:mail', (req, res) => {
+  console.log(req.params.mail)
+
+  res.send('OK')
+})
 
 module.exports = router

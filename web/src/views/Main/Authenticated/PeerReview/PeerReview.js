@@ -23,7 +23,7 @@ export class PeerReview extends React.Component {
   send = (id) => {
     let group = this.state.response.filter(g => g.id == id)[0]
 
-    console.log(group)
+    let messages = []
 
     for (let fromPerson of group.members) {
       let message = fromPerson.name + ' Please Review\n'
@@ -36,8 +36,30 @@ export class PeerReview extends React.Component {
       }
 
       message += 'Thanks!'
-      console.log(message)
+      messages.push({
+        message: message,
+        to: fromPerson.email
+      })
     }
+
+    let proms = messages.map(m => {
+      return fetch('http://localhost:8080/email/send', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: m.to,
+          text: m.message
+        })
+      })
+    })
+
+    Promise.all(proms)
+      .then(r => {
+        console.log('all done')
+      })
   }
 
   render() {

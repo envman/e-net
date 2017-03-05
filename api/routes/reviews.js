@@ -19,8 +19,11 @@ router.get('/groups', (req, res) => {
   let from = req.params.from
   let forPerson = req.params.to
 
+  let review = req.body
+  review.date = new Date().toString()
+
   mkdirp('./data/reviews/' + forPerson, (err) => {
-    fs.writeFile(path.join(__dirname, '..', 'data', 'reviews', forPerson, from + '.json'), JSON.stringify(req.body, null, 2), (fileErr) => {
+    fs.writeFile(path.join(__dirname, '..', 'data', 'reviews', forPerson, from + '.json'), JSON.stringify(review, null, 2), (fileErr) => {
       res.send('DONE')
     })
   })

@@ -36,7 +36,7 @@ export class Review extends React.Component {
       body: JSON.stringify(this.state)
     })
       .then(() => {
-        // this.context.router.push("/auth/recruitment/")
+        this.context.router.push("/thanks")
         console.log('done')
       })
       .catch((err) => {
