@@ -85,9 +85,7 @@ export class PeerReview extends React.Component {
                       <List>
                         {r.members.map((e, i) => <ListItem onClick={() => this.reviewFeedback(e.id)} primaryText={e.name + ' - ' + e.email} key={i}/>)}
                         <CardActions>
-                          <FloatingActionButton onClick={() => this.send(r.id)} mini={true} secondary={true}>
-                           <ContentAdd />
-                         </FloatingActionButton>
+                          <button className="btn btn-primary" onClick={() => this.send(r.id)}>Start Review Process</button>
                         </CardActions>
                       </List>
                     </CardText>
@@ -98,9 +96,6 @@ export class PeerReview extends React.Component {
           </TableBody>
         </Table>
         <div className="col-xs-1 col-xs-offset-11">
-          <FloatingActionButton style={{float: 'right'}}>
-           <ContentAdd />
-         </FloatingActionButton>
        </div>
       </div>
     )

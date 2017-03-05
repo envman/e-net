@@ -36,6 +36,9 @@ export class ReviewFeedback extends React.Component {
             text: 'Your review feedback is now available\nPlease See:\nhttp://localhost:3000/feedback/' + this.props.params.id
           })
         })
+        .then(r => {
+          this.context.router.push("/auth/review/")
+        })
       })
   }
 
@@ -60,10 +63,14 @@ export class ReviewFeedback extends React.Component {
           </div>
         )}
 
-        <button type="button" onClick={this.send} className="btn btn-primary">Save</button>
+        <button type="button" onClick={this.send} className="btn btn-primary">Send Feedback</button>
       </div>
     )
   }
+}
+
+ReviewFeedback.contextTypes = {
+    router: React.PropTypes.object
 }
 
 export default ReviewFeedback;
