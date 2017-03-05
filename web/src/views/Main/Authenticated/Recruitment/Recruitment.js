@@ -1,5 +1,10 @@
 import React, { PropTypes as T } from 'react'
+
 import { Button } from 'react-bootstrap'
+
+import {Button} from 'react-bootstrap'
+import { Link } from 'react-router'
+
 
 export class Recruitment extends React.Component {
   constructor(props, context) {
@@ -25,7 +30,7 @@ export class Recruitment extends React.Component {
         <h2>Recruitment</h2>
 
         <ul>
-          {this.state.response.map((r) => <li><a href={"/auth/applicant/" + r.id}>{r.name}</a></li>)}
+          {this.state.response.map((r) => <li><Link to={"/auth/applicant/" + r.id}>{r.name}</Link></li>)}
         </ul>
         <div className="container-fluid">
           <table className="table table-bordered table-hover">
