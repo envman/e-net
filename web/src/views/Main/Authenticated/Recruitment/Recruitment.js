@@ -64,7 +64,7 @@ export class Recruitment extends React.Component {
                   <input type="text" valueLink={linkState(this, 'newName')} className="form-control" />
                 </div>
                 <div className="col-md-6">
-                  <button type="button" onClick={this.createNew} className="btn btn-success">Create New</button>
+                  <button type="button" onClick={this.createNew} className="btn btn-primary">Create New</button>
                 </div>
               </div>
             </div>
