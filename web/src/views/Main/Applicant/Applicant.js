@@ -22,7 +22,7 @@ export class Recruitment extends React.Component {
         <h2>Applicants - {this.props.params.id}</h2>
 
         <div>{this.state.response.name}</div>
-        <div>{this.state.response.favColour}</div>
+        <div>{this.state.response.favColour}</div>        
       </div>
     )
   }
