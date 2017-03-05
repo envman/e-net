@@ -12,7 +12,7 @@ router.get('/test', (req, res) => {
 
 router.get('/find/:id', (req, res) => {
     let personId = req.params.id
-    fs.readFile(personId + '/personalData.json', function (err, data) {
+    fs.readFile('./data/' + personId + '/personalData.json', function (err, data) {
         if (err) {
             return res.send(err);
         }
@@ -26,7 +26,7 @@ router.get('/list', (req, res) => {
 
 router.post('/update', (req, res) => {
 
-  console.log('updating ', req.body)
+    console.log('updating ', req.body)
 
     let person = req.body
     person.id = person.id || shortid()
@@ -39,9 +39,9 @@ router.post('/update', (req, res) => {
         existing[0].name = person.name
     }
 
-    fs.writeFile('./list.json', JSON.stringify(list, null, 2), function(listErr) {
-        mkdirp('./' + person.id, (err) => {
-            fs.writeFile('./' + person.id + '/personalData.json', JSON.stringify(person, null, 2), function (err) {
+    fs.writeFile('./list.json', JSON.stringify(list, null, 2), function (listErr) {
+        mkdirp('./data/' + person.id, (err) => {
+            fs.writeFile('./data/' + person.id + '/personalData.json', JSON.stringify(person, null, 2), function (err) {
                 if (err) {
                     console.log(err)
                 }

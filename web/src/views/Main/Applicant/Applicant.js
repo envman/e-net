@@ -14,49 +14,41 @@ export class Recruitment extends React.Component {
       .then(res => res.json())
       .then(response => {
         response.comments = response.comments || []
-
         this.setState(response)
       })
   }
 
   save = () => {
     this.state.id = this.props.params.id
-
-    console.log('body', this.state)
-
     fetch('http://localhost:8080/applicants/update/', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json, text/plain, */*',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(this.state)
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.state)
     })
-    .then(() => { console.log("Done") })
-    .catch((err) => {
+      .then(() => { console.log("Done") })
+      .catch((err) => {
         console.log('broken!');
-    })
+      })
   }
 
   render() {
     return (
       <div>
-        <h2>Applicants - {this.props.params.id}</h2>
-
+        <h2>Applicant - <i>{this.state.name}</i></h2>
         <form>
           <div className="form-group">
             <label for="exampleInputEmail1">Name</label>
             <input type="text" className="form-control" valueLink={linkState(this, 'name')} />
           </div>
-
           <div className="form-group">
             <label for="exampleInputEmail1">Email</label>
             <input type="text" className="form-control" valueLink={linkState(this, 'email')} />
           </div>
-
           <button type="button" onClick={this.save} className="btn btn-primary">Save</button>
         </form>
-
       </div>
     )
   }
