@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
-import baseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
+import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme'
 
 export class AuthenticatedContainer extends React.Component {
 
@@ -27,9 +27,9 @@ export class AuthenticatedContainer extends React.Component {
               <Link to="/auth/home"><MenuItem><h1 className="text-center">e-Net</h1></MenuItem></Link>
               <Link to="/auth/recruitment"><MenuItem>Recruitment</MenuItem></Link>
               <Link to="/newstarter"><MenuItem>New Starters</MenuItem></Link>
-              <Link to="/product"><MenuItem>Products</MenuItem></Link>
-              <Link to="/client"><MenuItem>Clients</MenuItem></Link>
-              <Link to="/travelDirection"><MenuItem>Travel Directions</MenuItem></Link>
+              <Link to="/auth/product"><MenuItem>Products</MenuItem></Link>
+              <Link to="/auth/client"><MenuItem>Clients</MenuItem></Link>
+              <Link to="/auth/travelDirection"><MenuItem>Travel Directions</MenuItem></Link>
               <div className="emptyMenuItem"></div>
               <Link to="/auth/logout"><MenuItem>Logout</MenuItem></Link>
             </Drawer>

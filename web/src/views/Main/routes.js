@@ -39,10 +39,10 @@ export const makeMainRoutes = () => {
         <Route path="recruitment" component={Recruitment} />
         <Route path="applicant/:id" component={Applicant} />
         <Route path="logout" component={Logout} />
-        <Route path="/newstarter" component={NewStarter} />
-        <Route path="/client" component={Client} />
-        <Route path="/product" component={Product} />
-        <Route path="/travelDirection" component={TravelDirection} />
+        <Route path="newstarter" component={NewStarter} />
+        <Route path="client" component={Client} />
+        <Route path="product" component={Product} />
+        <Route path="travelDirection" component={TravelDirection} />
       </Route>
     </Route>
   )
