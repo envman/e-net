@@ -3,5 +3,31 @@
   "name": "Bob Bobson",
   "favColour": "",
   "email": "test@test.test",
-  "comments": []
+  "comments": [
+    {
+      "user": "test",
+      "message": "test"
+    },
+    {
+      "user": "test",
+      "message": "My new comment"
+    },
+    {
+      "user": "test",
+      "message": "Newer comment",
+      "date": "Sun Mar 05 2017 03:29:24 GMT+0000 (GMT)"
+    },
+    {
+      "user": "test",
+      "message": "Newer comment?!?!?!?",
+      "date": "Sun Mar 05 2017 03:32:30 GMT+0000 (GMT)"
+    },
+    {
+      "user": "test",
+      "message": "Newer comment?!?!?!? :D:D:D:D BBQ!",
+      "date": "Sun Mar 05 2017 03:33:13 GMT+0000 (GMT)",
+      "email": "robertgill@etech.net"
+    }
+  ],
+  "newComment": "Newer comment?!?!?!? :D:D:D:D BBQ!"
 }
