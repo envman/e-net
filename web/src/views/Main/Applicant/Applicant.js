@@ -22,8 +22,6 @@ export class Recruitment extends React.Component {
   save = () => {
     this.state.id = this.props.params.id
 
-    console.log('body', this.state)
-
     fetch('http://localhost:8080/applicants/update/', {
         method: 'POST',
         headers: {
