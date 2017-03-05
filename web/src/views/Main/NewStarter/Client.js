@@ -7,7 +7,7 @@ class Client extends Component {
   render() {
     return (
 
-        <div className="container-fluid">
+        <div>
           <div className="row tableStyle ">
             <div className="col-md-3"><img src="./Anesco.png" alt="Anesco" /></div>
             <div className="col-md-3"><img src="./be-insulated_etech1.png" alt="Be Insulated" /></div>
