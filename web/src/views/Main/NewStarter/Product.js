@@ -27,9 +27,9 @@ class Product extends Component {
     journeys such as ECO, Green Deal and Able to Pay.</div>
         </div>
         <div className="row tableStyle">
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/survey-hub/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/eco-hub/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/property-hub/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/survey-hub/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/eco-hub/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/property-hub/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
         </div>
 
         <div className="row tableStyle ">
@@ -51,9 +51,9 @@ class Product extends Component {
     and upload work that has already taken place.</div>
         </div>
         <div className="row tableStyle">
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/eco-portal/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/smart-survey-app/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/technical-monitoring-portal/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/eco-portal/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/smart-survey-app/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/technical-monitoring-portal/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
         </div>
 
         <div className="row tableStyle">
@@ -75,9 +75,9 @@ class Product extends Component {
      full property descriptions which can be used with the EPC App.</div>
         </div>
         <div className="row tableStyle">
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/property-assessment-app/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/installer-app/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
-          <div className="col-md-4"><button><a href="http://www.etech.net/products/floor-plan-app/"> See more <i class="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/property-assessment-app/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/installer-app/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
+          <div className="col-md-4"><button><a href="http://www.etech.net/products/floor-plan-app/"> See more <i className="fa fa-angle-right"></i> </a></button></div>
         </div>
 
         <div className="row tableStyle">

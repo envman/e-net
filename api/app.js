@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/email', require('./routes/email'))
 app.use('/applicants', require('./routes/applicants'))
+app.use('/reviews', require('./routes/reviews'))
 
 app.get('/ok', (req, res) => {
   res.send('OK')

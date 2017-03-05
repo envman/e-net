@@ -9,6 +9,10 @@ import App from './App'
 import { browserHistory } from 'react-router'
 import makeRoutes from './routes'
 
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+injectTapEventPlugin();
+
 const routes = makeRoutes()
 
 const mountNode = document.querySelector('#root');

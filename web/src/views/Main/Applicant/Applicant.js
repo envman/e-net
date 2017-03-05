@@ -2,7 +2,7 @@ import React, { PropTypes as T } from 'react'
 import { Button } from 'react-bootstrap'
 import linkState from 'react-link-state'
 
-export class Recruitment extends React.Component {
+export class Applicant extends React.Component {
   constructor(props, context) {
     super(props, context)
 
@@ -20,6 +20,9 @@ export class Recruitment extends React.Component {
 
   save = () => {
     this.state.id = this.props.params.id
+
+    console.log('body', this.state)
+
     fetch('http://localhost:8080/applicants/update/', {
       method: 'POST',
       headers: {
@@ -28,7 +31,7 @@ export class Recruitment extends React.Component {
       },
       body: JSON.stringify(this.state)
     })
-      .then(() => { console.log("Done") })
+      .then(() => { this.context.router.push("/auth/recruitment/") })
       .catch((err) => {
         console.log('broken!');
       })
@@ -54,4 +57,9 @@ export class Recruitment extends React.Component {
   }
 }
 
-export default Recruitment
+Applicant.contextTypes = {
+    router: React.PropTypes.object
+}
+
+
+export default Applicant
