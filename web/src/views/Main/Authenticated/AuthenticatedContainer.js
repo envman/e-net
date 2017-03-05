@@ -30,6 +30,7 @@ export class AuthenticatedContainer extends React.Component {
               <Link to="/product"><MenuItem>Products</MenuItem></Link>
               <Link to="/client"><MenuItem>Clients</MenuItem></Link>
               <Link to="/travelDirection"><MenuItem>Travel Directions</MenuItem></Link>
+              <div className="emptyMenuItem"></div>
               <Link to="/auth/logout"><MenuItem>Logout</MenuItem></Link>
             </Drawer>
           </div>

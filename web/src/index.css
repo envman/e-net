@@ -7,3 +7,8 @@ body {
 .wrapper {
   padding-left: 256px;
 }
+
+.emptyMenuItem {
+  display: block;
+  height: 30px;
+}
