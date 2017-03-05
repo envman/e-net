@@ -4,7 +4,9 @@
   "favColour": "",
   "email": "",
   "comments": [],
-  "files": [],
-  "status": "Pending Interview",
+  "files": [
+    "278812.pdf"
+  ],
+  "status": "Interviewed",
   "role": "Software Developer - Year Placement"
 }
