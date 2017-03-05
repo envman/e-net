@@ -29,4 +29,27 @@ router.get('/groups', (req, res) => {
   })
 })
 
+.get('/feedback/:id', (req, res) => {
+  let root = path.join(__dirname, '..', 'data', 'reviews', req.params.id)
+
+  fs.readdir(root, function (err, files) {
+    if (err) {
+      console.log(err)
+    }
+
+    let proms = files.map(f => new Promise((fulfill, reject) => {
+      fs.readFile(root + '/' + f, (err, file) => {
+        let part = JSON.parse(file)
+
+        fulfill(part)
+      })
+    }))
+
+    Promise.all(proms)
+      .then(data => {
+        res.json(data)
+      })
+  })
+})
+
 module.exports = router
