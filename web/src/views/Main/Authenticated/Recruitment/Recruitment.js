@@ -27,13 +27,14 @@ export class Recruitment extends React.Component {
   }
 
   createNew = () => {
+
     fetch('http://localhost:8080/applicants/update/', {
         method: 'POST',
         headers: {
           'Accept': 'application/json, text/plain, */*',
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name: this.newName })
+        body: JSON.stringify({ name: this.state.newName })
     })
     .then(() => {
        console.log("Done")
@@ -42,6 +43,13 @@ export class Recruitment extends React.Component {
     .catch((err) => {
         console.log('broken!');
     })
+  }
+
+  clicked = (e) => {
+    let id = e.target.parentElement.getAttribute("data-id")
+
+    this.context.router.push("/auth/applicant/" + id)
+    // this.props.history.push("/auth/applicant/" + id)
   }
 
   render() {
@@ -59,9 +67,6 @@ export class Recruitment extends React.Component {
 
         </form>
 
-        <ul>
-          {this.state.response.map((r) => <li><Link to={"/auth/applicant/" + r.id}>{r.name}</Link></li>)}
-        </ul>
         <div className="container-fluid">
           <table className="table table-bordered table-hover">
             <thead>
@@ -72,17 +77,24 @@ export class Recruitment extends React.Component {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Bob San</td>
-                <td>Software Developer</td>
-                <td>Test</td>
-              </tr>
+              {this.state.response.map((r) =>
+                <tr onClick={this.clicked} data-id={r.id} key={r.id}>
+                  <td>{r.name}</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr>
+              )}
+
             </tbody>
           </table>
         </div>
       </div>
     )
   }
+}
+
+Recruitment.contextTypes = {
+    router: React.PropTypes.object
 }
 
 export default Recruitment
