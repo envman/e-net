@@ -18,59 +18,89 @@
 
 
 const router = require('express').Router();
-const path = require('path');
-const bodyParser = require('body-parser');
 
+const nodemailer = require('nodemailer');
 
-const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
-const SENDGRID_SENDER = process.env.SENDGRID_SENDER;
-const Sendgrid = require('sendgrid')(SENDGRID_API_KEY);
+router.post('/send', (req, res) => {
+  console.log(req.body.email)
 
-router.set('views', path.join(__dirname, 'views'));
-router.set('view engine', 'pug');
-
-router.use(bodyParser.urlencoded({ extended: false }));
-
-router.get('/', (req, res) => {
-  res.render('index');
-});
-
-router.post('/hello', (req, res, next) => {
-  const sgReq = Sendgrid.emptyRequest({
-    method: 'POST',
-    path: '/v3/mail/send',
-    body: {
-      personalizations: [{
-        to: [{ email: req.body.email }],
-        subject: 'Hello World!'
-      }],
-      from: { email: SENDGRID_SENDER },
-      content: [{
-        type: 'text/plain',
-        value: 'Sendgrid on Google App Engine with Node.js.'
-      }]
-    }
+  // create reusable transporter object using the default SMTP transport
+  let transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+          user: 'enetmailer@gmail.com',
+          pass: 'Password123.'
+      }
   });
 
-  Sendgrid.API(sgReq, (err) => {
-    if (err) {
-      next(err);
-      return;
-    }
+  // setup email data with unicode symbols
+  let mailOptions = {
+      from: '"enet mailer" <enetmailer@gmail.com>', // sender address
+      to: req.body.email, // list of receivers
+      subject: req.body.subject, // Subject line
+      text: req.body.text, // plain text body
+      html: req.body.html // html body
+  };
 
-    res.render('index', {
-      sent: true
-    });
-    return;
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+          return console.log(error);
+      }
+
+      res.send('SENT')
+      console.log('Message %s sent: %s', info.messageId, info.response);
   });
-});
+})
 
-if (module === require.main) {
-  const PORT = process.env.PORT || 8080;
-  router.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}`);
-    console.log('Press Ctrl+C to quit.');
-  });
 
-}
+// const SENDGRID_API_KEY = '0zcsIYwqZvoyRB2Oz9Q0';
+// const SENDGRID_SENDER = 'noreply@etech.net';
+// const Sendgrid = require('sendgrid')(SENDGRID_API_KEY);
+
+
+// // router.get('/', (req, res) => {
+// //   res.render('index');
+// // });
+
+// router.post('/hello', (req, res) => {
+//   const sgReq = Sendgrid.emptyRequest({
+//     method: 'POST',
+//     path: '/v3/mail/send',
+//     body: {
+//       personalizations: [{
+//         to: [{ email: req.body.email }],
+//         subject: 'Hello World!'
+//       }],
+//       from: { email: SENDGRID_SENDER },
+//       content: [{
+//         type: 'text/plain',
+//         value: 'Sendgrid on Google App Engine with Node.js.'
+//       }]
+//     }
+//   });
+
+
+
+//   Sendgrid.API(sgReq, (err) => {
+//     if (err) {
+//       console.log(err)
+//     }
+
+//     res.send('YO')
+//     // res.render('index', {
+//     //   sent: true
+//     // });
+//     return;
+//   });
+// })
+
+// // if (module === require.main) {
+// //   const PORT = process.env.PORT || 8080;
+// //   router.listen(PORT, () => {
+// //     console.log(`App listening on port ${PORT}`);
+// //     console.log('Press Ctrl+C to quit.');
+// //   });
+
+// // }
 module.exports = router
